@@ -1,0 +1,75 @@
+{
+  "common": {
+    "arbitrumAccounts": "Contas Arbitrum",
+    "arbitrumLogo": "Logo Arbitrum",
+    "startNow": "Começar agora",
+    "learnMore": "Saiba mais"
+  },
+  "nav": {
+    "features": "Recursos",
+    "security": "Segurança",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Crie sua",
+    "titleHighlight": "Conta Arbitrum",
+    "titleEnd": "em 20 segundos",
+    "subtitle": "Seguro, rápido e grátis.",
+    "description": "Crie sua Conta Arbitrum para começar a usar Web3 e DeFi hoje.",
+    "claimNft": "Reivindique seu NFT ArbPrize grátis",
+    "appTitle": "Contas Arbitrum",
+    "appSubtitle": "A maneira mais fácil de entrar no Arbitrum",
+    "domainExample": "seunome.arbitrum.ac"
+  },
+  "howItWorks": {
+    "title": "Processo simples de 3 etapas",
+    "subtitle": "Comece com Arbitrum em segundos",
+    "step1Title": "Entre com email",
+    "step1Description": "Sem frases semente ou chaves privadas para gerenciar",
+    "step2Title": "Reivindique seu domínio",
+    "step2Description": "Pegue seu nome antes que alguém faça isso!",
+    "step3Title": "Faça coisas divertidas",
+    "step3Description": "Crie um NFT, brinque com DeFi, compre bitcoin, vote",
+    "freeTransaction": "Taxas de transação grátis"
+  },
+  "security": {
+    "title": "Construído para segurança",
+    "subtitle": "Sua segurança é nossa prioridade com recursos de segurança de nível empresarial",
+    "feature1Title": "Aplicações curadas",
+    "feature1Description": "Apenas aplicações verificadas e seguras são permitidas, prevenindo ataques de phishing.",
+    "feature2Title": "Ferramentas simplificadas",
+    "feature2Description": "Sem necessidade de carteiras externas ou wallet connect. Design intuitivo elimina erros comuns do usuário, protegendo seus ativos"
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "subtitle": "Tudo o que você precisa saber sobre Contas Arbitrum",
+    "q1": "As taxas de transação são grátis?",
+    "a1": "Estamos cobrindo-as por tempo limitado como parte de uma concessão do Arbitrum. Isso permite que você experimente todo o poder do Arbitrum sem custos iniciais.",
+    "q2": "Quão segura é minha Conta Arbitrum?",
+    "a2": "Sua conta usa segurança de nível empresarial com tecnologia de contratos inteligentes. Implementamos múltiplas camadas de proteção para protegê-lo dos golpes mais comuns e erros de usuário que levam à perda de fundos.",
+    "q3": "O que posso fazer com meu domínio arbitrum.ac?",
+    "a3": "Seu domínio arbitrum.ac serve tanto como endereço de carteira quanto como sua identidade web3. Qualquer pessoa pode enviar cripto para você usando seu nome de domínio fácil de lembrar.",
+    "q4": "Preciso de algum software ou extensão especial?",
+    "a4": "Nenhum software adicional necessário. Contas Arbitrum funciona diretamente no seu navegador web com apenas um login por email."
+  },
+  "finalCta": {
+    "title": "gm — Pronto em",
+    "titleHighlight": "20 segundos",
+    "subtitle": "Junte-se a milhares de usuários que já reivindicaram sua Conta Arbitrum. Sua jornada Web3 começa agora.",
+    "button": "Obter Conta Arbitrum",
+    "freeAccount": "Criação de conta grátis",
+    "gasSponsorship": "Patrocínio de gas ativo",
+    "quickSetup": "Configuração em 20 segundos"
+  },
+  "stickyButton": {
+    "text": "Obter uma Conta Arbitrum"
+  },
+  "footer": {
+    "headline": "Segurança bancária sem o banco!",
+    "subtitle": "Pronto para começar?",
+    "copyright": "© 2025 Unicorns, Inc. Todos os direitos reservados."
+  },
+  "languageSelector": {
+    "label": "Idioma"
+  }
+}

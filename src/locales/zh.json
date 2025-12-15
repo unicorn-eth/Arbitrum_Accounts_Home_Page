@@ -1,0 +1,75 @@
+{
+  "common": {
+    "arbitrumAccounts": "Arbitrum 账户",
+    "arbitrumLogo": "Arbitrum 标志",
+    "startNow": "立即开始",
+    "learnMore": "了解更多"
+  },
+  "nav": {
+    "features": "功能",
+    "security": "安全",
+    "faq": "常见问题"
+  },
+  "hero": {
+    "title": "创建您的",
+    "titleHighlight": "Arbitrum 账户",
+    "titleEnd": "只需20秒",
+    "subtitle": "安全、快速、免费。",
+    "description": "创建您的 Arbitrum 账户，今天就开始使用 Web3 和 DeFi。",
+    "claimNft": "领取您的免费 ArbPrize NFT",
+    "appTitle": "Arbitrum 账户",
+    "appSubtitle": "加入 Arbitrum 的最简单方式",
+    "domainExample": "你的名字.arbitrum.ac"
+  },
+  "howItWorks": {
+    "title": "简单的3步流程",
+    "subtitle": "几秒钟内开始使用 Arbitrum",
+    "step1Title": "使用邮箱登录",
+    "step1Description": "无需管理助记词或私钥",
+    "step2Title": "认领您的域名",
+    "step2Description": "在别人之前获取您的用户名！",
+    "step3Title": "做有趣的事",
+    "step3Description": "铸造 NFT、玩 DeFi、购买比特币、投票",
+    "freeTransaction": "免费交易费用"
+  },
+  "security": {
+    "title": "为安全而生",
+    "subtitle": "您的安全是我们的首要任务，我们提供企业级安全功能",
+    "feature1Title": "精选应用",
+    "feature1Description": "只允许经过验证的安全应用，防止钓鱼攻击。",
+    "feature2Title": "简化工具",
+    "feature2Description": "无需外部钱包或钱包连接。直观的设计消除常见用户错误，保护您的资产"
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "关于 Arbitrum 账户您需要知道的一切",
+    "q1": "交易费用免费吗？",
+    "a1": "作为 Arbitrum 资助计划的一部分，我们在限定时间内为您承担这些费用。这使您可以无需前期成本就能体验 Arbitrum 的全部功能。",
+    "q2": "我的 Arbitrum 账户有多安全？",
+    "a2": "您的账户使用企业级安全和智能合约技术。我们实施了多层保护，以保护您免受最常见的诈骗和导致资金损失的用户错误。",
+    "q3": "我可以用 arbitrum.ac 域名做什么？",
+    "a3": "您的 arbitrum.ac 域名既是您的钱包地址，也是您的 Web3 身份。任何人都可以使用您易于记忆的域名向您发送加密货币。",
+    "q4": "我需要特殊软件或扩展程序吗？",
+    "a4": "无需额外软件。Arbitrum 账户直接在您的网络浏览器中运行，只需电子邮件登录即可。"
+  },
+  "finalCta": {
+    "title": "gm — 准备就绪",
+    "titleHighlight": "20秒",
+    "subtitle": "加入已经领取了 Arbitrum 账户的数千名用户。您的 Web3 之旅现在开始。",
+    "button": "获取 Arbitrum 账户",
+    "freeAccount": "免费创建账户",
+    "gasSponsorship": "Gas 赞助激活中",
+    "quickSetup": "20秒设置"
+  },
+  "stickyButton": {
+    "text": "获取 Arbitrum 账户"
+  },
+  "footer": {
+    "headline": "银行级安全，无需银行！",
+    "subtitle": "准备好开始了吗？",
+    "copyright": "© 2025 Unicorns, Inc. 保留所有权利。"
+  },
+  "languageSelector": {
+    "label": "语言"
+  }
+}

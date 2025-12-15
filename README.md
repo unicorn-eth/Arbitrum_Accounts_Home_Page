@@ -1,274 +1,219 @@
-Polygon_Accounts_Home_Page
+# Arbitrum Accounts Home Page
 
+A marketing landing page for Arbitrum Accounts - a web3 wallet onboarding solution built on Arbitrum.
 
-# Added Analytics & Referral Tracking Setup Guide
+**Owner:** Unicorns, Inc.
+**Domain:** arbitrum.ac | app.arbitrum.ac
 
-## 1. Google Analytics 4 Setup
+## Project Overview
 
-### Step 1: Create GA4 Property
-1. Go to [Google Analytics](https://analytics.google.com)
-2. Create new GA4 property for `polygon.ac`
-3. Get your Measurement ID (format: `G-HCT7CL65JS`)
+This is a React + TypeScript landing page that promotes Arbitrum Accounts, allowing users to create a web3 wallet in 20 seconds with just an email login. The site features:
 
-### Step 2: Add GA4 to Your Site
+- Clean, modern UI with Arbitrum branding (cyan/navy color scheme)
+- Full internationalization (i18n) supporting 9 languages
+- Analytics and referral tracking system
+- Responsive design with mobile sticky CTA
 
-Update `index.html` by adding this in the `<head>` section:
+## Tech Stack
 
-```html
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HCT7CL65JS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX', {
-    'send_page_view': true
-  });
-</script>
+- **Framework:** React 18 + TypeScript
+- **Build Tool:** Vite 5
+- **Styling:** Tailwind CSS 3.4
+- **Icons:** Lucide React
+- **i18n:** i18next + react-i18next
+- **Analytics:** Google Analytics 4
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Header.tsx          # Navigation with language selector
+│   ├── Hero.tsx            # Main hero section with CTA
+│   ├── HowItWorks.tsx      # 3-step process section
+│   ├── SecurityFeatures.tsx # Security features section
+│   ├── FAQ.tsx             # Accordion FAQ section
+│   ├── FinalCTA.tsx        # Bottom call-to-action section
+│   ├── Footer.tsx          # Footer with copyright
+│   ├── StickyButton.tsx    # Mobile sticky CTA button
+│   └── LanguageSelector.tsx # Language dropdown component
+├── locales/
+│   ├── en.json             # English (base)
+│   ├── es.json             # Spanish
+│   ├── fr.json             # French
+│   ├── de.json             # German
+│   ├── pt.json             # Portuguese
+│   ├── zh.json             # Chinese (Simplified)
+│   ├── ja.json             # Japanese
+│   ├── ko.json             # Korean
+│   └── ar.json             # Arabic (RTL)
+├── utils/
+│   └── analytics.ts        # GA4 tracking & referral system
+├── i18n.ts                 # i18n configuration
+├── App.tsx                 # Main app component
+├── main.tsx                # Entry point
+└── index.css               # Tailwind imports
+
+public/
+└── arbitrum.svg            # Arbitrum logo
 ```
 
-### Step 3: Configure Custom Events in GA4
+## Key Configuration Files
 
-In GA4, create these custom events:
-- `cta_click` - Track button clicks
-- `referral_captured` - When referral code is detected
-- `scroll_depth` - Track user engagement
-- `time_on_page` - Session duration tracking
+- `tailwind.config.js` - Custom Arbitrum color palette
+- `index.html` - Meta tags, GA4 script, favicons
+- `vite.config.ts` - Vite configuration
 
-## 2. Referral Code System
+## Branding
 
-### URL Parameter Format
-
-Your referral links will look like:
-```
-https://www.polygon.ac/?ref=FRIEND123
-https://www.polygon.ac/?ref=ETH_DENVER&utm_source=twitter&utm_campaign=launch
-```
-
-### Supported Parameters
-- `ref` or `referral` - Your referral code
-- `utm_source` - Traffic source (twitter, discord, email)
-- `utm_medium` - Medium type (social, email, banner)
-- `utm_campaign` - Campaign name (launch, q4_promo)
-
-## 3. Implementation Steps
-
-### Install the Analytics Utility
-
-1. Create `src/utils/analytics.ts` with the provided code
-2. Import in your components:
-
-```typescript
-import { analytics } from '../utils/analytics';
-```
-
-### Update All CTA Buttons
-
-Replace all `href="https://app.polygon.ac"` with:
-
-```typescript
-href={analytics.getAppURL()}
-onClick={() => analytics.trackCTAClick('button_location')}
-```
-
-Button locations to track:
-- `hero_primary` - Main hero button
-- `hero_secondary` - Secondary hero CTAs
-- `how_it_works` - Section CTAs
-- `footer_cta` - Footer buttons
-- `sticky_mobile` - Mobile sticky button
-
-### Example Button Update:
-
-```typescript
-<a
-  href={analytics.getAppURL()}
-  onClick={() => analytics.trackCTAClick('footer_cta')}
-  className="inline-flex items-center px-8 py-4 bg-white hover:bg-gray-100 text-purple-600 font-semibold rounded-xl text-lg transition-all duration-300"
->
-  Start now
-</a>
-```
-
-## 4. Cloudflare Setup (Optional but Recommended)
-
-### Cloudflare Web Analytics
-For privacy-focused, cookie-free analytics:
-
-1. Go to Cloudflare Dashboard > Web Analytics
-2. Add your site `polygon.ac`
-3. Copy the beacon script
-4. Add to `index.html`:
-
-```html
-<!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' 
-        data-cf-beacon='{"token": "YOUR_TOKEN_HERE"}'></script>
-```
-
-### Benefits of Cloudflare Analytics:
-- No cookie consent needed
-- Works with ad blockers
-- Ultra-lightweight
-- Real-time data
-- Bot filtering
-
-## 5. Testing Your Setup
-
-### Test Referral Codes
-
-1. Visit: `http://localhost:5173/?ref=TEST123`
-2. Open DevTools Console
-3. Check sessionStorage: `sessionStorage.getItem('polygon_referral')`
-4. Click a CTA button
-5. Verify parameters are passed to `app.polygon.ac`
-
-### Test GA4 Events
-
-1. Install [Google Analytics Debugger](https://chrome.google.com/webstore/detail/google-analytics-debugger) Chrome extension
-2. Enable debug mode
-3. Click buttons and verify events fire
-4. Check GA4 Realtime reports
-
-## 6. Campaign URL Builder
-
-Create trackable links for campaigns:
-
-### Example Campaign URLs:
-
-**Twitter Launch:**
-```
-https://www.polygon.ac/?ref=TWITTER_LAUNCH&utm_source=twitter&utm_medium=social&utm_campaign=oct_2025
-```
-
-**Email Campaign:**
-```
-https://www.polygon.ac/?ref=EMAIL_PROMO&utm_source=newsletter&utm_medium=email&utm_campaign=polyprize
-```
-
-**Influencer Partnership:**
-```
-https://www.polygon.ac/?ref=INFLUENCER_NAME&utm_source=youtube&utm_medium=video&utm_campaign=partnership
-```
-
-## 7. Dashboard Metrics to Track
-
-### Key Metrics in GA4:
-- Total page views
-- Unique visitors
-- Referral code distribution
-- CTA click-through rates by location
-- Average scroll depth
-- Time on page
-- Bounce rate by traffic source
-
-### Custom Reports to Create:
-1. **Referral Performance**: Group by `referral_code` dimension
-2. **CTA Effectiveness**: Compare `cta_location` click rates
-3. **Campaign ROI**: Track conversions by `utm_campaign`
-4. **Traffic Sources**: UTM source/medium breakdown
-
-## 8. Server-Side Tracking (Advanced)
-
-For more accurate tracking without ad blockers:
-
-### Cloudflare Workers Integration
+### Colors (defined in tailwind.config.js)
 
 ```javascript
-// Cloudflare Worker to log analytics
-addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request))
-})
-
-async function handleRequest(request) {
-  const url = new URL(request.url)
-  
-  // Log referral
-  if (url.searchParams.get('ref')) {
-    await logToAnalytics({
-      type: 'referral',
-      code: url.searchParams.get('ref'),
-      timestamp: Date.now(),
-      userAgent: request.headers.get('user-agent')
-    })
-  }
-  
-  return fetch(request)
+arbitrum: {
+  50: '#E8F4FF',   // Light background
+  100: '#C9E4FF',
+  200: '#9DCCED',  // Light accent
+  300: '#5BB8FF',
+  400: '#12AAFF',  // Primary cyan
+  500: '#1B4ADD',  // Primary blue
+  600: '#213147',  // Dark navy
+  700: '#162A3E',
+  800: '#0D1E31',
+  900: '#05163D',  // Darkest navy
 }
 ```
 
-## 9. Privacy Compliance
+### Logo
+- File: `/public/arbitrum.svg`
+- Source: https://arbitrum.io/arb_logo_color.svg
 
-### GDPR/CCPA Considerations:
-- ✅ SessionStorage only (no persistent tracking)
-- ✅ No PII collected
-- ✅ Referral codes are campaign identifiers, not personal data
-- ✅ User can clear session anytime
-- ⚠️ Consider adding cookie banner if using GA4
+## Internationalization (i18n)
 
-### Minimal Cookie Banner:
-```html
-<div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #000; color: #fff; padding: 1rem; text-align: center;">
-  We use analytics to improve your experience. 
-  <button onclick="acceptCookies()">Accept</button>
-</div>
+### Supported Languages
+| Code | Language | RTL |
+|------|----------|-----|
+| en | English | No |
+| es | Spanish | No |
+| fr | French | No |
+| de | German | No |
+| pt | Portuguese | No |
+| zh | Chinese (Simplified) | No |
+| ja | Japanese | No |
+| ko | Korean | No |
+| ar | Arabic | Yes |
+
+### Adding a New Language
+
+1. Create `src/locales/{code}.json` (copy from `en.json`)
+2. Translate all strings
+3. Add import in `src/i18n.ts`:
+   ```typescript
+   import newLang from './locales/newlang.json';
+   ```
+4. Add to resources object in `src/i18n.ts`
+5. Add to `languages` array in `src/i18n.ts`:
+   ```typescript
+   { code: 'xx', name: 'Language Name', flag: '🏳️', rtl: false }
+   ```
+
+### Translation Keys Structure
+
+```json
+{
+  "common": {},      // Shared strings (logo alt, buttons)
+  "nav": {},         // Navigation links
+  "hero": {},        // Hero section
+  "howItWorks": {},  // How it works section
+  "security": {},    // Security features
+  "faq": {},         // FAQ questions & answers
+  "finalCta": {},    // Final CTA section
+  "stickyButton": {},// Mobile sticky button
+  "footer": {}       // Footer content
+}
 ```
 
-## 10. Monitoring & Optimization
+## Analytics & Referral Tracking
 
-### Weekly Checks:
-- Review top referral codes
-- Check CTA conversion rates
-- Monitor bounce rates
-- Analyze traffic sources
-
-### Monthly Actions:
-- A/B test CTA copy
-- Optimize underperforming campaigns
-- Create reports for stakeholders
-- Adjust referral incentives
-
-## 11. Integration with app.polygon.ac
-
-### On app.polygon.ac Backend:
-
-```javascript
-// Capture referral on account creation
-app.post('/api/account/create', async (req, res) => {
-  const { email, referralCode } = req.body;
-  
-  await createAccount({
-    email,
-    referralCode,
-    source: req.query.utm_source,
-    campaign: req.query.utm_campaign
-  });
-  
-  // Track conversion back to GA4
-  await trackConversion(referralCode);
-});
+### URL Parameters
+```
+https://www.arbitrum.ac/?ref=CODE&utm_source=twitter&utm_campaign=launch
 ```
 
-## 12. Quick Start Checklist
+- `ref` or `referral` - Referral code
+- `utm_source` - Traffic source
+- `utm_medium` - Medium type
+- `utm_campaign` - Campaign name
 
-- [ ] Add GA4 tracking code to `index.html`
-- [ ] Create `src/utils/analytics.ts` file
-- [ ] Update all CTA buttons with tracking
-- [ ] Test referral code flow locally
-- [ ] Deploy to production
-- [ ] Verify GA4 events in real-time
-- [ ] Create campaign URLs
-- [ ] Set up weekly monitoring
-- [ ] Document for team
+### Tracked Events
+- `cta_click` - Button clicks with location
+- `referral_captured` - Referral code detection
+- `scroll_depth` - User scroll engagement
+- `time_on_page` - Session duration
 
-## Need Help?
+### Session Storage
+- Key: `arbitrum_referral`
+- Stores referral data for the session duration
 
-Common issues:
-- **Events not showing**: Check GA4 Measurement ID is correct
-- **Referral codes lost**: Verify sessionStorage is accessible
-- **App redirect fails**: Check CORS settings on app.polygon.ac
-- **Ad blockers**: Consider Cloudflare Analytics as backup
+## Development
+
+### Install Dependencies
+```bash
+npm install
+```
+
+### Run Development Server
+```bash
+npm run dev
+```
+
+### Build for Production
+```bash
+npm run build
+```
+
+### Preview Production Build
+```bash
+npm run preview
+```
+
+## External Links
+
+All CTA buttons link to:
+- **App URL:** https://app.arbitrum.ac
+- Referral parameters are automatically appended via `analytics.getAppURL()`
+
+## Important Notes for Claude Sessions
+
+### When Making Changes:
+1. **Text changes** - Update ALL locale files in `src/locales/`
+2. **Color changes** - Use `arbitrum-{shade}` classes (e.g., `text-arbitrum-400`)
+3. **New sections** - Add translation keys and use `useTranslation()` hook
+4. **Links to app** - Use `analytics.getAppURL()` for referral tracking
+
+### Key Files to Reference:
+- `src/locales/en.json` - All translatable strings
+- `tailwind.config.js` - Color palette
+- `src/utils/analytics.ts` - Tracking implementation
+- `src/i18n.ts` - Language configuration
+
+### Branding Guidelines:
+- Primary color: `arbitrum-400` (#12AAFF - cyan)
+- Dark backgrounds: `arbitrum-600` to `arbitrum-900`
+- Accent for CTAs: `teal-500` (#12AAFF)
+- Logo: Always use `/arbitrum.svg`
+- Copyright: "© 2025 Unicorns, Inc."
+
+## Deployment
+
+The site is configured for static hosting. Build outputs to `/dist` folder.
+
+Compatible with:
+- Cloudflare Pages
+- Vercel
+- Netlify
+- Any static hosting
 
 ---
 
-**Pro Tip**: Start with GA4 + basic referral tracking, then add Cloudflare Analytics and server-side tracking as you scale!
+**Last Updated:** December 2025
+**Maintained by:** Unicorns, Inc.
