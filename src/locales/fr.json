@@ -1,0 +1,75 @@
+{
+  "common": {
+    "arbitrumAccounts": "Comptes Arbitrum",
+    "arbitrumLogo": "Logo Arbitrum",
+    "startNow": "Commencer maintenant",
+    "learnMore": "En savoir plus"
+  },
+  "nav": {
+    "features": "Fonctionnalités",
+    "security": "Sécurité",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Créez votre",
+    "titleHighlight": "Compte Arbitrum",
+    "titleEnd": "en 20 secondes",
+    "subtitle": "Sûr, rapide et gratuit.",
+    "description": "Créez votre Compte Arbitrum pour commencer à utiliser Web3 et DeFi dès aujourd'hui.",
+    "claimNft": "Réclamez votre NFT ArbPrize gratuit",
+    "appTitle": "Comptes Arbitrum",
+    "appSubtitle": "Le moyen le plus simple de rejoindre Arbitrum",
+    "domainExample": "votrenom.arbitrum.ac"
+  },
+  "howItWorks": {
+    "title": "Processus simple en 3 étapes",
+    "subtitle": "Commencez avec Arbitrum en quelques secondes",
+    "step1Title": "Connectez-vous par email",
+    "step1Description": "Pas de phrases de récupération ni de clés privées à gérer",
+    "step2Title": "Réclamez votre domaine",
+    "step2Description": "Obtenez votre pseudo avant quelqu'un d'autre !",
+    "step3Title": "Amusez-vous",
+    "step3Description": "Créez un NFT, jouez avec DeFi, achetez du bitcoin, votez",
+    "freeTransaction": "Frais de transaction gratuits"
+  },
+  "security": {
+    "title": "Conçu pour la sécurité",
+    "subtitle": "Votre sécurité est notre priorité avec des fonctionnalités de sécurité de niveau entreprise",
+    "feature1Title": "Applications vérifiées",
+    "feature1Description": "Seules les applications vérifiées et sûres sont autorisées, empêchant les attaques de phishing.",
+    "feature2Title": "Outils simplifiés",
+    "feature2Description": "Pas besoin de portefeuilles externes ou de wallet connect. La conception intuitive élimine les erreurs courantes des utilisateurs, protégeant vos actifs"
+  },
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "subtitle": "Tout ce que vous devez savoir sur les Comptes Arbitrum",
+    "q1": "Les frais de transaction sont-ils gratuits ?",
+    "a1": "Nous les couvrons pour une durée limitée dans le cadre d'une subvention d'Arbitrum. Cela vous permet de découvrir toute la puissance d'Arbitrum sans frais initiaux.",
+    "q2": "Mon Compte Arbitrum est-il sécurisé ?",
+    "a2": "Votre compte utilise une sécurité de niveau entreprise avec la technologie des contrats intelligents. Nous avons mis en place plusieurs couches de protection pour vous protéger des escroqueries les plus courantes et des erreurs d'utilisateur qui entraînent la perte de fonds.",
+    "q3": "Que puis-je faire avec mon domaine arbitrum.ac ?",
+    "a3": "Votre domaine arbitrum.ac sert à la fois d'adresse de portefeuille et d'identité web3. N'importe qui peut vous envoyer des crypto en utilisant votre nom de domaine facile à retenir.",
+    "q4": "Ai-je besoin d'un logiciel ou d'une extension spéciale ?",
+    "a4": "Aucun logiciel supplémentaire requis. Les Comptes Arbitrum fonctionnent directement dans votre navigateur web avec juste une connexion par email."
+  },
+  "finalCta": {
+    "title": "gm — Prêt en",
+    "titleHighlight": "20 secondes",
+    "subtitle": "Rejoignez des milliers d'utilisateurs qui ont déjà réclamé leur Compte Arbitrum. Votre voyage Web3 commence maintenant.",
+    "button": "Obtenir un Compte Arbitrum",
+    "freeAccount": "Création de compte gratuite",
+    "gasSponsorship": "Parrainage de gas actif",
+    "quickSetup": "Configuration en 20 secondes"
+  },
+  "stickyButton": {
+    "text": "Obtenir un Compte Arbitrum"
+  },
+  "footer": {
+    "headline": "Sécurité bancaire sans la banque !",
+    "subtitle": "Prêt à commencer ?",
+    "copyright": "© 2025 Unicorns, Inc. Tous droits réservés."
+  },
+  "languageSelector": {
+    "label": "Langue"
+  }
+}

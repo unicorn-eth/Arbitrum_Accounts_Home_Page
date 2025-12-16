@@ -1,0 +1,75 @@
+{
+  "common": {
+    "arbitrumAccounts": "Arbitrum アカウント",
+    "arbitrumLogo": "Arbitrum ロゴ",
+    "startNow": "今すぐ始める",
+    "learnMore": "詳細を見る"
+  },
+  "nav": {
+    "features": "機能",
+    "security": "セキュリティ",
+    "faq": "よくある質問"
+  },
+  "hero": {
+    "title": "あなたの",
+    "titleHighlight": "Arbitrum アカウント",
+    "titleEnd": "を20秒で作成",
+    "subtitle": "安全、高速、無料。",
+    "description": "Arbitrum アカウントを作成して、今日から Web3 と DeFi を始めましょう。",
+    "claimNft": "無料の ArbPrize NFT を獲得",
+    "appTitle": "Arbitrum アカウント",
+    "appSubtitle": "Arbitrum に参加する最も簡単な方法",
+    "domainExample": "あなたの名前.arbitrum.ac"
+  },
+  "howItWorks": {
+    "title": "シンプルな3ステップ",
+    "subtitle": "数秒で Arbitrum を始めましょう",
+    "step1Title": "メールでサインイン",
+    "step1Description": "シードフレーズや秘密鍵の管理は不要",
+    "step2Title": "ドメインを取得",
+    "step2Description": "他の人に取られる前にあなたの名前を確保！",
+    "step3Title": "楽しいことをする",
+    "step3Description": "NFTをミント、DeFiで遊ぶ、ビットコインを購入、投票する",
+    "freeTransaction": "取引手数料無料"
+  },
+  "security": {
+    "title": "セキュリティのために構築",
+    "subtitle": "エンタープライズグレードのセキュリティ機能で、あなたの安全が私たちの優先事項です",
+    "feature1Title": "厳選されたアプリ",
+    "feature1Description": "検証済みの安全なアプリのみが許可され、フィッシング攻撃を防ぎます。",
+    "feature2Title": "シンプルなツール",
+    "feature2Description": "外部ウォレットやウォレット接続は不要。直感的なデザインが一般的なユーザーエラーを排除し、あなたの資産を保護します"
+  },
+  "faq": {
+    "title": "よくある質問",
+    "subtitle": "Arbitrum アカウントについて知っておくべきすべてのこと",
+    "q1": "取引手数料は無料ですか？",
+    "a1": "Arbitrum からの助成金の一環として、期間限定で私たちが負担しています。これにより、初期費用なしで Arbitrum のフルパワーを体験できます。",
+    "q2": "Arbitrum アカウントはどのくらい安全ですか？",
+    "a2": "あなたのアカウントは、スマートコントラクト技術を使用したエンタープライズグレードのセキュリティを使用しています。最も一般的な詐欺や資金損失につながるユーザーエラーからあなたを守るために、複数の保護層を実装しています。",
+    "q3": "arbitrum.ac ドメインで何ができますか？",
+    "a3": "あなたの arbitrum.ac ドメインは、ウォレットアドレスと Web3 アイデンティティの両方として機能します。覚えやすいドメイン名を使って、誰でもあなたに暗号通貨を送ることができます。",
+    "q4": "特別なソフトウェアや拡張機能は必要ですか？",
+    "a4": "追加のソフトウェアは不要です。Arbitrum アカウントは、メールログインだけでウェブブラウザで直接動作します。"
+  },
+  "finalCta": {
+    "title": "gm — 準備完了",
+    "titleHighlight": "20秒",
+    "subtitle": "すでに Arbitrum アカウントを取得した何千人ものユーザーに参加しましょう。あなたの Web3 の旅が今始まります。",
+    "button": "Arbitrum アカウントを取得",
+    "freeAccount": "無料アカウント作成",
+    "gasSponsorship": "ガススポンサーシップ有効",
+    "quickSetup": "20秒セットアップ"
+  },
+  "stickyButton": {
+    "text": "Arbitrum アカウントを取得"
+  },
+  "footer": {
+    "headline": "銀行なしの銀行レベルの安全性！",
+    "subtitle": "始める準備はできましたか？",
+    "copyright": "© 2025 Unicorns, Inc. 全著作権所有。"
+  },
+  "languageSelector": {
+    "label": "言語"
+  }
+}

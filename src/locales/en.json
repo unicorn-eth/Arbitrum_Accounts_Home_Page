@@ -1,0 +1,75 @@
+{
+  "common": {
+    "arbitrumAccounts": "Arbitrum Accounts",
+    "arbitrumLogo": "Arbitrum Logo",
+    "startNow": "Start now",
+    "learnMore": "Learn more"
+  },
+  "nav": {
+    "features": "Features",
+    "security": "Security",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Create your",
+    "titleHighlight": "Arbitrum Account",
+    "titleEnd": "in 20 seconds",
+    "subtitle": "Safe, fast & free.",
+    "description": "Create your Arbitrum Account to start using Web3 and DeFi today.",
+    "claimNft": "Claim your free ArbPrize NFT",
+    "appTitle": "Arbitrum Accounts",
+    "appSubtitle": "The easiest way to onboard to Arbitrum",
+    "domainExample": "yourname.arbitrum.ac"
+  },
+  "howItWorks": {
+    "title": "Simple 3-step process",
+    "subtitle": "Get started with Arbitrum in seconds",
+    "step1Title": "Sign in with email",
+    "step1Description": "No seed phrases or private keys to manage",
+    "step2Title": "Claim your domain",
+    "step2Description": "Get your handle before someone else does!",
+    "step3Title": "Do fun things",
+    "step3Description": "Mint an NFT, Play with defi, buy bitcoin, vote",
+    "freeTransaction": "Free transaction fees"
+  },
+  "security": {
+    "title": "Built for security",
+    "subtitle": "Your safety is our priority with enterprise-grade security features",
+    "feature1Title": "Curated applications",
+    "feature1Description": "Only verified, safe applications are allowed, preventing phishing attacks.",
+    "feature2Title": "Simplified tooling",
+    "feature2Description": "No need for external wallets or wallet connect. Intuitive design eliminates common user errors, protecting you & your assets"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Everything you need to know about Arbitrum Accounts",
+    "q1": "Are transaction fees free?",
+    "a1": "We are covering them for a limited time as part of a grant from Arbitrum. This allows you to experience the full power of Arbitrum without any upfront costs.",
+    "q2": "How secure is my Arbitrum Account?",
+    "a2": "Your account uses enterprise-grade security with smart contract technology. We've implemented multiple layers of protection to protect you from the most common scams and user errors that lead to loss of funds.",
+    "q3": "What can I do with my arbitrum.ac domain?",
+    "a3": "Your arbitrum.ac domain serves as both your wallet address and your web3 identity. Anyone can send you crypto using your easy-to-remember domain name.",
+    "q4": "Do I need any special software or extensions?",
+    "a4": "No additional software required. Arbitrum Accounts works directly in your web browser with just an email login."
+  },
+  "finalCta": {
+    "title": "gm — Ready in",
+    "titleHighlight": "20 seconds",
+    "subtitle": "Join thousands of users who've already claimed their Arbitrum Account. Your Web3 journey starts now.",
+    "button": "Get Arbitrum Account",
+    "freeAccount": "Free account creation",
+    "gasSponsorship": "Gas sponsorship active",
+    "quickSetup": "20-second setup"
+  },
+  "stickyButton": {
+    "text": "Get an Arbitrum Account"
+  },
+  "footer": {
+    "headline": "Bank-level safety without the bank!",
+    "subtitle": "Ready to get started?",
+    "copyright": "© 2025 Unicorns, Inc. All rights reserved."
+  },
+  "languageSelector": {
+    "label": "Language"
+  }
+}

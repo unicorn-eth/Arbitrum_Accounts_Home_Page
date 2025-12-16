@@ -25,7 +25,7 @@ export class AnalyticsTracker {
       if (typeof window === 'undefined' || typeof sessionStorage === 'undefined') {
         return false;
       }
-      
+
       // Test if sessionStorage is actually writable (fails in Safari private mode)
       const testKey = '__storage_test__';
       sessionStorage.setItem(testKey, 'test');
@@ -44,7 +44,7 @@ export class AnalyticsTracker {
     if (!this.isStorageAvailable) {
       return null;
     }
-    
+
     try {
       return sessionStorage.getItem(key);
     } catch (e) {
@@ -60,7 +60,7 @@ export class AnalyticsTracker {
     if (!this.isStorageAvailable) {
       return;
     }
-    
+
     try {
       sessionStorage.setItem(key, value);
     } catch (e) {
@@ -81,10 +81,10 @@ export class AnalyticsTracker {
     try {
       // Capture URL parameters
       const urlParams = new URLSearchParams(window.location.search);
-      
+
       // Check for referral code
       const refCode = urlParams.get('ref') || urlParams.get('referral');
-      
+
       // UTM parameters
       const utmSource = urlParams.get('utm_source');
       const utmMedium = urlParams.get('utm_medium');
@@ -100,8 +100,8 @@ export class AnalyticsTracker {
         };
 
         // Store in sessionStorage for duration of session (if available)
-        this.setStorageItem('polygon_referral', JSON.stringify(this.referralData));
-        
+        this.setStorageItem('arbitrum_referral', JSON.stringify(this.referralData));
+
         // Track the referral event
         this.trackEvent('referral_captured', {
           referral_code: refCode,
@@ -111,7 +111,7 @@ export class AnalyticsTracker {
         });
       } else {
         // Try to retrieve existing referral data from session
-        const stored = this.getStorageItem('polygon_referral');
+        const stored = this.getStorageItem('arbitrum_referral');
         if (stored) {
           try {
             this.referralData = JSON.parse(stored);
@@ -159,9 +159,9 @@ export class AnalyticsTracker {
    * @param defaultRef - Default referral code to use if no referral is captured
    */
   getAppURL(defaultRef?: string): string {
-    const baseURL = 'https://app.polygon.ac';
+    const baseURL = 'https://app.arbitrum.ac';
     const params = new URLSearchParams();
-    
+
     // Use captured referral data or default
     if (this.referralData) {
       if (this.referralData.code) {
@@ -196,12 +196,12 @@ export class AnalyticsTracker {
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      
+
       const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
-      
+
       if (scrollPercent > maxScroll) {
         maxScroll = scrollPercent;
-        
+
         trackingPoints.forEach(point => {
           if (scrollPercent >= point && !tracked.has(point)) {
             tracked.add(point);
@@ -222,7 +222,7 @@ export class AnalyticsTracker {
    */
   trackTimeOnPage(): void {
     const startTime = Date.now();
-    
+
     const trackTime = () => {
       const timeSpent = Math.round((Date.now() - startTime) / 1000);
       this.trackEvent('time_on_page', {
@@ -233,7 +233,7 @@ export class AnalyticsTracker {
 
     // Track before user leaves
     window.addEventListener('beforeunload', trackTime);
-    
+
     // Also track every 30 seconds for users who stay long
     setInterval(() => {
       const timeSpent = Math.round((Date.now() - startTime) / 1000);
