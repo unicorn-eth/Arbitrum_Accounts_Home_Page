@@ -58,9 +58,9 @@ const Hero = () => {
               {t('common.startNow')}
             </a>
 
-            <p className="text-xl lg:text-2xl text-arbitrum-400 leading-relaxed text-center m-0">
+            <!-- p className="text-xl lg:text-2xl text-arbitrum-400 leading-relaxed text-center m-0">
               {t('hero.claimNft')}
-            </p>
+            </p -->
           </div>
 
           {/* Visual representation of the app */}
