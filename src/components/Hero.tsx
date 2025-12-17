@@ -57,7 +57,6 @@ const Hero = () => {
             >
               {t('common.startNow')}
             </a>
-<!-- Hide Claim Display for now -->
 
           </div>
 
