@@ -11,11 +11,11 @@ const ProofAndTrust = () => {
 
           <div className="max-w-3xl mx-auto mb-8">
             <blockquote className="text-lg text-gray-700 italic">
-              "Arbitrum Accounts made onboarding our ETH Denver attendees seamless.
-              What used to take 15 minutes now takes 20 seconds."
+              "Unicorn.eth makes onboarding and ticketing for ETHDenver seamless.
+              Attendees receive personalized access and easy ticketing - while being introduced to Web3 in a safe, intuitive way. Lines never exceeded 10 minutes. A true game changer for us."
             </blockquote>
             <cite className="text-sm text-gray-500 mt-2 block">
-              — Web3 Developer at ETH Denver 2025
+              — Chief Executive Steward of ETHDenver
             </cite>
           </div>
         </div>
