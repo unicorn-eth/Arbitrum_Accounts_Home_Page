@@ -37,7 +37,7 @@ const WhyArbitrumAccounts = () => {
             Why Arbitrum Accounts?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Built for the next generation of web3 users who value safety without sacrificing user experience.
+            Built for the next generation of web3 users who value safety without sacrificing user experience. Leveraging unicorn.eth the Web3 Account infrastructure trusted by modern brands.
           </p>
         </div>
 
